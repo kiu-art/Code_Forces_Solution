@@ -15,4 +15,4 @@ int main(){
         else{result ++;}
     }
     cout<<result;
-}
+}ref
