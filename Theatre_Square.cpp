@@ -19,5 +19,5 @@ int main(){
     if(m%a!=0 and n%a!=0){cout<<((n/a)+1)*((m/a)+1); return 0;}
     if(m%a!=0 and n%a==0){cout<<(n/a)*((m/a)+1); return 0;}
     if(m%a==0 and n%a!=0){cout<<((n/a)+1)*((m/a)); return 0;}    
-    return 0
+    return 0;
 }
