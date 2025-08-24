@@ -25,8 +25,9 @@ signed main() {
             result+=v[x+1];
         }}
         else{
-            for(int x=0;x<n-1;x+=2){
+            for(int x=0;x<n-1;x++){
             result+=v[x+1];
+            x++;
         }
         result+=v[n-1];
         }
