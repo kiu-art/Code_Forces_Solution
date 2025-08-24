@@ -1,3 +1,4 @@
 *.exe
 .vscode/start.code-snippets
 tempCodeRunnerFile.cpp
+*.cph
