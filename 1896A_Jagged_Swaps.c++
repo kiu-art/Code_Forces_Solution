@@ -12,12 +12,16 @@ void fast_io() {
 int main() {
     fast_io(); 
     int t;cin>>t;
-    for(auto u:t){
+    for(int w=0;w<t;w++){
         int n;cin>>n;
         vector<int>v (n);
-        for(int x=1;x<n;x++){
-            
+        for(auto &x:v){cin>>x;}
+        int a=v[n-1];
+        if(v[0]!=1){cout<<"NO";}
+        else{
+            cout<<"YES";
         }
+        cout<<"\n";
     }
     return 0;
 }
