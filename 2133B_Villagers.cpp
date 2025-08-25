@@ -24,11 +24,11 @@ signed main() {
         for(int x=0;x<n;x+=2){
             result+=v[x+1];
         }}
-        else{n=n-2;
-            for(int x=0;x<n;x+=2){
-            result+=v[x+1];
+        else{
+            for(int x=n-1;x>=1;x-=2){
+            result+=v[x];
         }
-        result+=v[n-1];
+        result+=v[0];
         }
         cout<<result<<"\n";
     }
