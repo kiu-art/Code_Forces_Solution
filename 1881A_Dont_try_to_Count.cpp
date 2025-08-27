@@ -13,16 +13,27 @@ int main() {
     fast_io(); 
     int t;cin>>t;
     for(int u=0;u<t;u++){
+        cout<<"ljbj";
         int a,b;
-        cin>>a,b;
-        string c,d;
+        cin>>a>>b;
+        string c;
+        string d;
         cin>>c>>d;
-        int result=0;
-        while(c.length()<=d.length()){
-            for(int y=0;y<c.length()-b+1;y++){
-                
+        int result=-1;
+        int e=0;
+        for(int x=0;x<b;x+=c.length()){
+            cout<<"jbhjvjg";
+            for(int y=0;y<c.length()-b;y++){
+                if(c.length()>=b and c.substr(y,b)==d){
+                    e=1;
+                    break;
+                }
             }
+            c+=c;
+            if(e==1){result=x;break;}
         }
+        if(e==1){cout<<-1;}
+        else{cout<<result<<"\n";}
     }
     return 0;
 }
