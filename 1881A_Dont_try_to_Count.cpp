@@ -13,27 +13,51 @@ int main() {
     fast_io(); 
     int t;cin>>t;
     for(int u=0;u<t;u++){
-        cout<<"ljbj";
         int a,b;
         cin>>a>>b;
         string c;
         string d;
         cin>>c>>d;
-        int result=-1;
+        int result=0;
         int e=0;
-        for(int x=0;x<b;x+=c.length()){
-            cout<<"jbhjvjg";
-            for(int y=0;y<c.length()-b;y++){
-                if(c.length()>=b and c.substr(y,b)==d){
+        while(c.length()<b){
+            c+=c;
+            result++;
+        }
+        for(int x=0;x<=c.length()-b;x++){
+            if(c.substr(x,b)==d){
+                if(x<a-b){
+                cout<<0;
+                e=1;
+                break;}
+                else{
+                    cout<<result;
                     e=1;
                     break;
                 }
             }
-            c+=c;
-            if(e==1){result=x;break;}
         }
-        if(e==1){cout<<-1;}
-        else{cout<<result<<"\n";}
+        if(e==0){
+            c+=c;
+            result++;
+                    for(int x=0;x<c.length()-b;x++){
+            if(c.substr(x,b)==d){
+                if(x<a-b){
+                cout<<0;
+                e=1;
+                break;}
+                else{
+                    cout<<result;
+                    e=1;
+                    break;
+                }
+            }
+        }
+        }
+        if(e==0){
+            cout<<-1;
+        }
+        cout<<"\n";
     }
     return 0;
 }
