@@ -16,6 +16,8 @@ int main() {
     for(int x=1;x<=c;x++){
         result+=a*x;
     }
-    cout<<result-b;
+    if(result-b<1){cout<<0;}
+    else{
+    cout<<result-b;};
     return 0;
 }
