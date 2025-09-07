@@ -2,6 +2,7 @@
 #include <vector>   
 #include <algorithm> 
 using namespace std; 
+#define int long long
 
 void fast_io() {
     std::ios_base::sync_with_stdio(false);
@@ -9,7 +10,7 @@ void fast_io() {
     std::cout.tie(NULL);
 }
 
-int main() {
+signed main() {
     fast_io(); 
     int t;cin>>t;
     while(t--){
@@ -27,6 +28,9 @@ int main() {
         }
         else if(n==k){
             cout<<"YES";
+        }
+        else{
+            cout<<"NO";
         }
         cout<<"\n";
     }
