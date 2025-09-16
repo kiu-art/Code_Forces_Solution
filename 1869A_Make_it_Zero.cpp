@@ -18,27 +18,13 @@ int main() {
         for(auto &x:v){
             cin>>x;
         }
-        int b=0;
-        vector<int> re;
-        for(int x=0;x<7;x++){
-            int s=v[x];
-            for(int y=x+1;y<8;y++){
-                s=v[y]^s;
-                if(s=0){
-                    b=y;
-                }
-            }
-            if(b!=0){
-                for(int z=x;z<=b;z++){v[z]=0;}
-                re.push_back(x);
-                re.push_back(b);
-            }
-            b=0;
+        if(n%2==0){
+            cout<<2<<"\n"<<1<<" "<<n<<"\n"<<1<<" "<<n;
         }
-        cout<<re.size()<<"\n";
-        for(int x=0;x<re.size();x+=2){
-            cout<<re[x]<<" "<<re[x+1]<<"\n";
+        else{
+            cout<<4<<"\n"<<1<<" "<<n-1<<"\n"<<1<<" "<<n-1<<"\n"<<n-1<<" "<<n<<"\n"<<n-1<<" "<<n;
         }
+        cout<<"\n";
     }
     return 0;
 }
