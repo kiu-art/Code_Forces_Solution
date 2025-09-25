@@ -29,7 +29,8 @@ signed main() {
     while(t--){
         int n;cin>>n;
         vector<set<int>>v=input(n);
-        
+        int e=0;
+        for(int n)
     }
     return 0;
 }
