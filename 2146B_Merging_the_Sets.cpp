@@ -9,28 +9,34 @@ void fast_io() {
     std::cin.tie(NULL);
     std::cout.tie(NULL);
 }
-vector<set<int>>input(int n){
-    vector<set<int>> v;
-    for(int x=0;x<n;x++){
-        int a;cin>>a;
-        set<int>s;
-        int b;
-        for(int y=0;y<a;y++){
-            cin>>b;
-            s.insert(b);
-        }
-        v.push_back(s);
-    }
-    return v;
-}
 signed main() {
     fast_io();
     int t;cin>>t;
     while(t--){
-        int n;cin>>n;
-        vector<set<int>>v=input(n);
+        int n,q;cin>>n>>q;
         int e=0;
-        for(int n)
+        map<int,vector<int>> m;
+        for(int x=0;x<n;x++){
+            int l;cin>>l;
+            int a;
+            for(int y=0;y<l;y++){
+                cin>>a;
+                m[a].push_back(x);
+            }
+        }
+        int r=0;
+        set<int>unique;
+        for(int x=1;x<=q;x++){
+            if(m[x].size()==1){
+                unique.insert(m[x][0]);
+            }
+            else if(m[x].size()==0){
+                r++;
+                break;
+            }
+        }
+        if(n-unique.size()<2  or r==1){cout<<"NO\n";continue;}
+        cout<<"YES\n";
     }
     return 0;
 }
