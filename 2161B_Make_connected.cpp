@@ -286,9 +286,9 @@ signed main() {
                 }
             }
         }
-        if(u==364){
-            cout<<s;
-        }
+        // if(u==364){
+        //     cout<<s;
+        // }
         if(k==4 and e==4){
             cout<<"YES";
         }
