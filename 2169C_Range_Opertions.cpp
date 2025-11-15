@@ -14,20 +14,31 @@ signed main() {
     while(t--){
         int n;cin>>n;
         vector<int> v(n);
-        int a=0;
-        int b=1;
+        int a;
+        int b=0;
         int c=1;
+        int d=0;
+        int e=1;
+        int f=0;
+        int g=0;
         for(int x=1;x<=n;x++){
-            cin>>v[x-1];
-            a+=v[x-1];
-            if(a>=(n)*(x-b)){
-                c=b;
-                b=x;
-                if(c==1){
-                    
+            cin>>a;
+            d+=a;
+            if(x*n<b+a){
+                if(n*(c-e)-d>f or g==0){
+                    f=n*(c-e)-d;
+                    e=c;
+                    c=x;
+                    g=1;
                 }
+                d=0;
             }
+            b+=a;
         }
+        if(g==1){
+            cout<<b+f<<endl;continue;
+        }
+        cout<<1<<" "<<c<<" "<<e<<endl;
     }
     return 0;
 }
