@@ -29,7 +29,7 @@ signed main() {
         }
         if(s!=0){cout<<"-1\n";continue;}
         for(auto x:v){cout<<x<<" ";}
-        cout<<endl;
+        cout<<"\n";
     }
     return 0;
 }
