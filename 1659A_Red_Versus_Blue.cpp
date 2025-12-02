@@ -15,20 +15,9 @@ signed main() {
         int n,r,b;cin>>n>>r>>b;
         int a=r/(b+1);
         int i=r%(b+1);
-        // if(r%(b+1)==0){
-        //     a=r/(b+1);
-        // }
-        // else if(r%b!=0){
-        //     a=r/b;
-        // }
-        // else{
-        //     a=r/(b+1);
-
-        // }
         int c=0;
         int e=0;
         int f=0;
-        // cout<<a<<" "<<i;
         for(int x=0;e!=b;x++){
             if(c==a){
                 if(i!=0){
@@ -46,7 +35,6 @@ signed main() {
             }
             f++;
         }
-        // cout<<"hbhbh";
         for(int x=0;x<n-f;x++){
             cout<<"R";
         }
