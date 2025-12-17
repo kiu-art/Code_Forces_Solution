@@ -12,15 +12,15 @@ signed main() {
     fast_io(); 
     int n;cin>>n;
     string s;cin>>s;
-    int a=0;
+    int e=0;
     for(int x=0;x<n-1;x++){
         if(s[x]>s[x+1]){
             cout<<"YES\n";
             cout<<x+1<<" "<<x+2<<endl;
-            a=1;
+            e=1;
             break;
         }
     }
-    if(a==0){cout<<"NO"<<endl;}
+    if(e==0){cout<<"NO"<<endl;}
     return 0;
 }
