@@ -17,21 +17,12 @@ signed main() {
         int e=0;
         for(int x=0;x<n;x++){
             string a;cin>>a;
-            e=0;
-            for(int y=0;y<s.length() and y<a.length();y++){
-                if(a[y]<s[y]){
-                    a+=s;
-                    e=1;
-                    s=a;
-                    break;
-                }
-                else if(s[y]<a[y]){
-                    e=0;
-                    break;
-                }
-            }
-            if(e==0){
+            if(s+a<a+s){
                 s+=a;
+            }
+            else{
+                a+=s;
+                s=a;
             }
         }
         cout<<s<<endl;
