@@ -65,7 +65,7 @@ signed main() {
         for(int x=1;x<=b;x++){
             for(int y=0;y<n;y++){
                 int val=y-a[y]*x;
-                if(val>=0 and val<n){
+                if(val>=0 and val<y){
                     if(a[val]==x){
                         r++;
                     }
@@ -75,7 +75,7 @@ signed main() {
         for(int x=1;x<=b;x++){
             for(int y=0;y<n;y++){
                 int val=y+a[y]*x;
-                if(val>=0 and val<n and a[y]>b){
+                if(val>=y and val<n and a[y]>b){
                     if(a[val]==x){
                         r++;
                     }
